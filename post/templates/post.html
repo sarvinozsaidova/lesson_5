@@ -9,21 +9,25 @@
 </head>
 <body>
     <table>
-        <th> title </th>
-        <th> id </th>
-        <th> creation_date </th>
-    <tr>
-        <td> DTM </td>
-        <td> 1 </td>
-        <td> 12.11.2023 </td>
-    </tr>
-    {% for post in content%}
-    <tr>
-        <td> {{content.title}} </td>
-        <td> {{content.id}} </td>
-        <td> {{content.creation_date}} </td>
-    </tr>
-    {% endfor %}
+            <th> title </th>
+            <th> id </th>
+            <th> yaratilgan_sana </th>
+            <th> image </th>
+        <!-- <tr>
+            <td> DTM </td>
+            <td> 1 </td>
+            <td> 12.11.2023 </td>
+        </tr> -->
+        {% for post in content%}
+        <tr>
+            <td> {{post.title}} </td>
+            <td> {{post.id}} </td>
+            <td> {{post.yaratilgan_sana}} </td>
+            <td> 
+                <img src="{% static post.image %}">
+            </td>
+        </tr>
+        {% endfor %}
     
     </table>
 </body>

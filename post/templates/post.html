@@ -13,18 +13,14 @@
             <th> id </th>
             <th> yaratilgan_sana </th>
             <th> image </th>
-        <!-- <tr>
-            <td> DTM </td>
-            <td> 1 </td>
-            <td> 12.11.2023 </td>
-        </tr> -->
         {% for post in content%}
         <tr>
+            <link rel="stylesheet" href="{% static 'singlepost.html'%}">
             <td> {{post.title}} </td>
             <td> {{post.id}} </td>
             <td> {{post.yaratilgan_sana}} </td>
             <td> 
-                <img src="{% static post.image %}">
+                <img style="width: 250px; height: auto;" src="/media/{{post.image}}">
             </td>
         </tr>
         {% endfor %}
